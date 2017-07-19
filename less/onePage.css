@@ -1,0 +1,108 @@
+@charset 'utf-8';
+html,
+body,
+.container {
+  height: 100%;
+}
+.head_top {
+  height: 8.5rem;
+  padding-top: 1rem;
+  position: relative;
+}
+.head_top img {
+  display: block;
+  width: 25%;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.head_top .user_info {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #bfbfbf;
+}
+.head_top .user_info li {
+  font: normal 0.6rem/1rem '微软雅黑';
+  width: 33.3333%;
+  float: left;
+  text-align: center;
+  color: #fff;
+  border-right: 1px solid #fff;
+}
+.head_top .user_info li:nth-of-type(3) {
+  border: none;
+}
+.head_top .user_info li i {
+  width: 100%;
+  display: block;
+}
+.head_top .user_info li span {
+  width: 100%;
+  display: block;
+}
+.list_body {
+  background-color: #eaeaea;
+  margin-top: 1rem;
+}
+.list_body .list_main li {
+  float: left;
+  width: 50%;
+  height: 7rem;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+.list_body .list_main li:nth-of-type(2n+1) {
+  border-right: 1px solid #ccc;
+}
+.list_body .list_main li:last-of-type {
+  border-bottom: none;
+}
+.list_body .list_main li:nth-of-type(5) {
+  border-bottom: none;
+}
+.list_body .list_main li a {
+  width: 4rem;
+  height: 4rem;
+  display: block;
+  border-radius: 50%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 4rem;
+  color: #fff;
+}
+.list_body .list_main li a i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+}
+.list_body .list_main li a span {
+  color: #666;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  line-height: 1.3rem;
+  font-size: .8rem;
+}
+.list_body .list_main li:nth-of-type(1) a {
+  background-color: #c5d086;
+}
+.list_body .list_main li:nth-of-type(2) a {
+  background-color: #f48093;
+}
+.list_body .list_main li:nth-of-type(3) a {
+  background-color: #8c97cb;
+}
+.list_body .list_main li:nth-of-type(4) a {
+  background-color: #84ccc9;
+}
+.list_body .list_main li:nth-of-type(5) a {
+  background-color: #facd89;
+}
+.list_body .list_main li:nth-of-type(6) a {
+  background-color: #f19ec2;
+}

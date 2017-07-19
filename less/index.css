@@ -1,0 +1,112 @@
+@charset 'utf-8';
+html,
+body {
+  height: 100%;
+}
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #fff;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #fff;
+}
+.container {
+  width: 100%;
+  position: relative;
+}
+.container img {
+  width: 100%;
+  display: block;
+}
+.container form {
+  padding-top: 12rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.container form ul {
+  width: 100%;
+}
+.container form ul li {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+}
+.container form ul li i {
+  position: absolute;
+  left: 22%;
+  font-size: 1.1rem;
+  color: #fff;
+}
+.container form ul li input {
+  line-height: 2rem;
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: .5rem;
+  font-size: .8rem;
+  background-color: #656E93;
+  padding-left: 1.8rem;
+}
+.container form ul li p {
+  position: absolute;
+  left: 20%;
+  bottom: 0;
+  transform: translateY(72%);
+  color: #E78A5E;
+  display: none;
+}
+.container form ul li #entry {
+  display: inline-block;
+  width: 60%;
+  line-height: 2rem;
+  background: -moz-linear-gradient(90deg, #E47A5E 0, #D93C59 56%, #9C71A7 92%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, 90deg, color-stop(0, E47A5E), color-stop(56%, D93C59), color-stop(92%, 9C 71A 7));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(90deg, #E47A5E 0, #D93C59 56%, #9C71A7 92%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(90deg, #E47A5E 0, #D93C59 56%, #9C71A7 92%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(90deg, #E47A5E 0, #D93C59 56%, #9C71A7 92%);
+  /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
+  /* for IE */
+  background: linear-gradient(90deg, #E47A5E 0, #D93C59 56%, #9C71A7 92%);
+  /* W3C */
+  border-radius: .5rem;
+  font-size: .8rem;
+  color: #fff;
+  margin-top: 1rem;
+}
+.container form ul li #getCode {
+  position: absolute;
+  right: 20%;
+  top: 1px;
+  line-height: 2rem;
+  width: 5rem;
+  background-color: #E5835F;
+  color: #fff;
+  border-radius: .5rem;
+}
+.container .footer_info {
+  font-size: .6rem;
+  color: #ccc;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 1rem;
+}

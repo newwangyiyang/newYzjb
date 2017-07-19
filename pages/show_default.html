@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>明细展示</title>
+    <link rel="stylesheet" href="../css//base.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../less/show_default.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/layer.js"></script>
+    <script src="../js/prefixfree.min.js"></script>
+    <script src="../js/datePicker.js"></script>
+    <script src="../js/BaseUrl.js"></script>
+    <script src="../js/CookieUtil.js"></script>
+    <script src="../js/show_default.js"></script>
+</head>
+<body>
+    <div class="container" style="max-width:640px;min-width:320px;margin:0 auto;background-color:#eaeaea;">
+        <!--日期选择部分-->
+        <header class="show_date">
+            <a href="javascript:;" id="go_back">
+                <i class="iconfont icon-back"></i>
+            </a>
+            <a href="javascript:;" id="date_choose">
+                <p><span class="year"> 2088 </span> 年 <span class="month"> 34 </span> 月</p>
+                <p>选择日期</p>
+            </a>
+        </header>
+        <!--列表展示部分-->
+        <main class="show_main">
+            <ul class="show_content" id="show_content">
+                <li>
+                    <span>冲击方 : </span>
+                    <span class="losher"></span>
+                </li>
+                <li>
+                    <span>被冲击方 : </span>
+                    <span class="unLosher"></span>
+                </li>
+                <li>
+                    <span>丹红密码 : </span>
+                    <span class="danhongCode"></span>
+                </li>
+                <li>
+                    <span>批号 : </span>
+                    <span class="bNumber"></span>
+                </li>
+                <li>
+                    <span>价位 : </span>
+                    <span class="price"></span>
+                </li>
+                <li>
+                    <span>购买数量 : </span>
+                    <span class="buyNum"></span>
+                </li>
+                <li>
+                    <span>购药地点 : </span>
+                    <span class="buyLocation"></span>
+                </li>
+                <li>
+                    <span>处罚冲击方 : </span>
+                    <span class="pushLosher">
+                        <p><i>购药款(元) ：</i></p>
+                        <p><i>数量(支) ：</i></p>
+                        <p><i>合计金额(元) ：</i></p>
+                    </span>
+                </li>
+                <li>
+                    <span>拨给被冲击方 : </span>
+                    <span class="approLosher">
+                        <p><i>购药款(元) ：</i></p>
+                        <p><i>数量(支) ：</i></p>
+                        <p><i>合计金额(元) ：</i></p>
+                    </span>
+                </li>
+                <li>
+                    <span>备注 : </span>
+                    <span class="remark"></span>
+                </li>
+                <li>
+                    <span>发货日期 : </span>
+                    <span class="issDate"></span>
+                </li>
+                <li>
+                    <span>发货数量 : </span>
+                    <span class="issNum"></span>
+                </li>
+                <li>
+                    <span>发货规格 : </span>
+                    <span class="issSpec"></span>
+                </li>
+                <li>
+                    <span>收货单位 : </span>
+                    <span class="takeGoods"></span>
+                </li>
+            </ul>
+            <ul class="show_list">
+                
+            </ul>
+        </main>
+        
+    </div>
+    <a href="./onePage.html" class="goOnePage">
+        <img src="../imgs/goIndex.png" alt="">
+    </a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+    "province":"河南",
+    "losher":"许宏铭",
+    "unLosher":"商务(冯伟）",
+    "danhongCode":"16091058440",
+    "bNumber":"16091058",
+    "price":"49",
+    "buyNum":"30",
+    "buyLocation":"医院",
+    "pushLosher":{
+        "buyMed":"1470",
+        "buyNumber":"30",
+        "allMoney":"2593.5"
+    },
+    "approLosher":{
+        "buyPrice":"1470",
+        "bunNum":"10",
+        "allMoney":"1844.5"
+    },
+    "remark":"货药监局收",
+    "issDate":"2016.09.22",
+    "issNum":"10",
+    "issSpec":"10ml丹红注射液",
+    "takeGoods":"濮阳市顺达药业有限公司"
+}
