@@ -24,40 +24,7 @@
             <h3>保证金明细</h3>
         </header>
         <main class="main_list">
-            <ul class="list_body">
-                <li class="clearfix">
-                    <i>大区：</i>
-                    <span>50000</span>
-                </li>
-                <li class="clearfix">
-                    <i>省份：</i>
-                    <span>50000</span>
-                </li>
-                <li class="clearfix">
-                    <i>地区：</i>
-                    <span>50000</span>
-                </li>
-                <li class="clearfix">
-                    <i>姓名：</i>
-                    <span>50000</span>
-                </li>
-                <li class="clearfix">
-                    <i>模式：</i>
-                    <span>50000</span>
-                </li>
-                <li class="clearfix">
-                    <i>应交保证金（万元）：</i>
-                    <span>50000</span>
-                </li>
-                <li class="clearfix">
-                    <i>已交保证金（万元）：</i>
-                    <span>50000</span>
-                </li>
-                <li class="clearfix">
-                    <i>应补保证金（万元）：</i>
-                    <span>50000</span>
-                </li>
-            </ul>
+            
         </main>
         <footer>
 
@@ -68,39 +35,39 @@
     </a>
     <script type="text/html" id="lashList">
         {{each list}}
-        <h3 class="show_title"><em></em>{{$value.userinfo.userName}}</h3>
+        <h3 class="show_title"><em></em>{{$value.agentdepName}}</h3>
         <ul class="list_body">
             <li class="clearfix">
                 <i>大区：</i>
-                <span>50000</span>
+                <span>{{$value.agentdepArea}}</span>
             </li>
             <li class="clearfix">
                 <i>省份：</i>
-                <span>50000</span>
+                <span>{{$value.agentdepPro}}</span>
             </li>
             <li class="clearfix">
                 <i>地区：</i>
-                <span>50000</span>
+                <span>{{$value.agentdepRegion}}</span>
             </li>
             <li class="clearfix">
                 <i>姓名：</i>
-                <span>50000</span>
+                <span>{{$value.agentdepName}}</span>
             </li>
             <li class="clearfix">
                 <i>模式：</i>
-                <span>50000</span>
+                <span>{{$value.agentdepPattern}}</span>
             </li>
             <li class="clearfix">
                 <i>应交保证金（万元）：</i>
-                <span>50000</span>
+                <span>{{$value.agentdepNeeddep}}</span>
             </li>
             <li class="clearfix">
                 <i>已交保证金（万元）：</i>
-                <span>50000</span>
+                <span>{{$value.agentdepHasdep}}</span>
             </li>
             <li class="clearfix">
                 <i>应补保证金（万元）：</i>
-                <span>50000</span>
+                <span>{{$value.agentdepHassupdep == '' ? '0' : $value.agentdepHassupdep}}</span>
             </li>
         </ul>
         {{/each}}

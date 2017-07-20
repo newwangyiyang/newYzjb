@@ -24,8 +24,6 @@
             triggerTime: 300,
             returnDefault: false
           });
-
-          $('.list_body').html(str);
         } else if (data.statusCode == 0) {
           //获取数据失败；
           layer.open({

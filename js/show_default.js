@@ -29,7 +29,7 @@
                 //重新渲染页面数据
                 $('.show_content').hide();
                 $('.show_list').show();
-                getPushList(getPort() + 'selectHitDetailByuserId', { 'userCode': getCookie('userCode'), 'datatime': theSelectData });
+                getPushList(getPort() + 'selectHitDetailByuserId', { 'userId': getCookie('userId'), 'datatime': theSelectData });
             }
         });
         //冲击列表渲染        
@@ -102,7 +102,7 @@
                         $('.approLosher p').eq(0).append('<b>' + res.attImpactedMoney + '</b>');
                         $('.approLosher p').eq(1).append('<b>' + res.attImpactedNumber + '</b>');
                         $('.approLosher p').eq(2).append('<b>' + res.attImpactedTotalAmount + '</b>');
-                        $('.remark').text(res.attRemarks);
+                        $('.remark').text(res.attRemarks == '' ? '无' : res.attRemarks);
                         $('.issDate').html(formatDate(res.attDeliveryDate));
                         $('.issNum').text(res.attDeliveryNumber);
                         $('.issSpec').text(res.attDeliverySpec);

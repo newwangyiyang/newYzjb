@@ -93,6 +93,7 @@
                             setCookie("userMob", data.obj.userMob);
                             setCookie("userProvince", data.obj.userProvince);
                             setCookie("userRegion", data.obj.userRegion);
+                            setCookie("deptName",data.obj.deptName);
                             window.location.href = './pages/onePage.html';
                         } else if(data.statusCode == "0"){
                                 layer.open({
