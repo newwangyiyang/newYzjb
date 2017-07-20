@@ -13,6 +13,28 @@ body {
   text-align: center;
   background-color: #22c4f3;
 }
+.main_list .show_title {
+  width: 100%;
+  padding-left: 1rem;
+  line-height: 1.5rem;
+  padding-left: 10px;
+  border-top: 1px solid #e3e3e3;
+  background: #f4f4f4;
+  font: normal 14px/32px "Microsoft YaHei";
+}
+.main_list .show_title em {
+  float: right;
+  display: block;
+  width: 2rem;
+  height: 32px;
+  background: url(../imgs/icoAdd.png) 16px 12px no-repeat;
+}
+.main_list .show_title.on em {
+  background-position: 16px -57px;
+}
+.main_list .list_body {
+  display: none;
+}
 .main_list .list_body li {
   margin-bottom: .5rem;
   line-height: 2rem;
@@ -23,7 +45,7 @@ body {
   width: 50%;
   text-align: right;
   font-weight: 600;
-  font-size: .75rem;
+  font-size: .7rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
@@ -43,7 +65,7 @@ body {
   width: 2.5rem;
   height: 2.5rem;
   display: block;
-  position: absolute;
+  position: fixed;
   right: 1rem;
   bottom: 1rem;
 }

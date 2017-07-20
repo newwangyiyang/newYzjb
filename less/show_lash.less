@@ -14,9 +14,68 @@ body {
         text-align: center;
     }
 }
+
+
+.sideMenu {
+            border: 1px solid #ddd;
+        }
+
+        .sideMenu h3 {
+            height: 32px;
+            line-height: 32px;
+            padding-left: 10px;
+            border-top: 1px solid #e3e3e3;
+            background: #f4f4f4;
+            cursor: pointer;
+            font: normal 14px/32px "Microsoft YaHei";
+        }
+
+        .sideMenu h3 em {
+            float: right;
+            display: block;
+            width: 40px;
+            height: 32px;
+            background: url(images/icoAdd.png) 16px 12px no-repeat;
+            cursor: pointer;
+        }
+
+        .sideMenu h3.on em {
+            background-position: 16px -57px;
+        }
+
+        .sideMenu ul {
+            padding: 8px 25px;
+            color: #999;
+            display: none;
+            /* 默认都隐藏 */
+        }
+
+
+
+
 .show_main {
+    .show_title {
+        width: 100%;
+        padding-left: 1rem;
+        line-height: 1.5rem;
+        padding-left: 10px;
+        border-top: 1px solid #e3e3e3;
+        background: #f4f4f4;
+        font: normal 14px/32px "Microsoft YaHei";
+        em {
+            float: right;
+            display: block;
+            width: 2rem;
+            height: 32px;
+            background: url(../imgs/icoAdd.png) 16px 12px no-repeat;
+        }
+        &.on {
+            em {
+                background-position: 16px -57px;
+            }   
+        }
+    }
     .show_content {
-        padding-bottom: 2.3rem;
         display: none;
         li {
             margin-bottom: .5rem;
@@ -57,7 +116,7 @@ body {
     width: 2.5rem;
     height: 2.5rem;
     display: block;
-    position: absolute;
+    position: fixed;
     right: 1rem;
     bottom: 1rem;
     img {

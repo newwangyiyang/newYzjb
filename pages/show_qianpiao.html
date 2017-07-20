@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/iconfont.css">
     <link rel="stylesheet" href="../less/show_qianpiao.css">
-    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery1.42.min.js"></script>
+    <script src="../js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="../js/template-web.js"></script>
     <script src="../js/CookieUtil.js"></script>
     <script src="../js/BaseUrl.js"></script>
     <script src="../js/layer.js"></script>
@@ -22,19 +24,19 @@
         <main class="main_list">
             <ul class="list_body">
                 <li class="clearfix">
-                    <i>欠票欠票欠票欠票：</i>
+                    <i>省份：</i>
                     <span>数据1数据1数据1数据1数据1数据1</span>
                 </li>
                 <li class="clearfix">
-                    <i>欠票欠票欠票欠票：</i>
+                    <i>地区：</i>
                     <span>数据1数据1数据1数据1数据1数据1</span>
                 </li>
                 <li class="clearfix">
-                    <i>欠票欠票欠票欠票：</i>
+                    <i>经理：</i>
                     <span>数据1数据1数据1数据1数据1数据1</span>
                 </li>
                 <li class="clearfix">
-                    <i>欠票欠票欠票欠票：</i>
+                    <i>欠核销票（元）：</i>
                     <span>数据1数据1数据1数据1数据1数据1</span>
                 </li>
             </ul>
@@ -46,5 +48,30 @@
     <a href="./onePage.html" class="goOnePage">
         <img src="../imgs/goIndex.png" alt="">
     </a>
+    <script type="text/html" id="lashList">
+        {{each list}}
+        {{if $index > 0}}
+        <h3 class="show_title"><em></em>{{$value.qianpiaoManager}}</h3>
+        <ul class="list_body">
+                <li class="clearfix">
+                    <i>省份：</i>
+                    <span>{{$value.qianpiaoPro}}</span>
+                </li>
+                 <!-- <li class="clearfix">
+                    <i>地区：</i>
+                    <span>数据1数据1数据1数据1数据1数据1</span>
+                </li> -->
+                <li class="clearfix">
+                    <i>经理：</i>
+                    <span>{{$value.qianpiaoManager}}</span>
+                </li> 
+                <li class="clearfix">
+                    <i>欠核销票（元）：</i>
+                    <span>{{$value.qianpiaoQianhexiticike}}</span>
+                </li>
+            </ul>
+        {{/if}}
+        {{/each}}
+    </script>
 </body>
 </html>

@@ -33,7 +33,7 @@
             }
         });
         //冲击列表渲染        
-        getPushList(getPort() + 'selectHitDetailByuserId', { 'userCode': getCookie('userCode'), 'datatime': '2017-' + month });
+        getPushList(getPort() + 'selectHitDetailByuserId', { 'userId': getCookie('userId'), 'datatime': '2017-' + month });
         // getPushList('../test/simple.json',{});
         //点击列表页进入详情页面
         $('.show_main').on('click', '.go_content', function () {
