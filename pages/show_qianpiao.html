@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>欠票明细</title>
+    <title>票据明细</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/iconfont.css">
     <link rel="stylesheet" href="../less/show_qianpiao.css">
@@ -34,7 +34,7 @@
     <script type="text/html" id="lashList">
         {{each list}}
         {{if list.length > 0}}
-        <h3 class="show_title"><em></em>{{$value.qianpiaoManager}}</h3>
+        <h3 class="show_title"><em></em>{{$value.qianpiaoManager+= ' ['+$value.pharmInfo.pharminfoAbbreviation+']'}}</h3>
         <ul class="list_body">
                 <li class="clearfix">
                     <i>省份：</i>
@@ -47,6 +47,10 @@
                 <li class="clearfix">
                     <i>欠核销票（元）：</i>
                     <span>{{$value.qianpiaoQianhexiticike == '' ? '未知' : $value.qianpiaoQianhexiticike}}</span>
+                </li>
+                <li class="clearfix">
+                    <i>截止日期 ：</i>
+                    <span>{{$value.qianpiaoRemark3 == null ? '未知' : $value.qianpiaoRemark3}}</span>
                 </li>
         </ul>
         {{/if}}

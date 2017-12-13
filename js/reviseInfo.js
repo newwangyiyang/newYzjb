@@ -11,7 +11,7 @@
         $('.tel_res').text(getCookie('userMob'));
         $('.province_res').text(getCookie('userProvince'));
         $('.area_res').text(getCookie('userRegion') == 'null' ? '未知' : getCookie('userRegion'));
-        $('.code_res').text(getCookie('userId'));
+        $('.code_res').text(getCookie('userCode'));
         $('.dept_res').text(getCookie('deptName'));
     });
 })();

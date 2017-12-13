@@ -21,13 +21,14 @@
                     success: function (data) {
                         console.log(data);
                         var list = data.list;
+                        var newList = list.reverse();
                         var arrLen = list.length;
                         if (arrLen > 0) {
-                            list.forEach(function (v, i) {
+                            newList.forEach(function (v, i) {
                                 result += '<li>'
                                     + '<a class="turnPage" sysbackId="' + v.sysbackId + '" href="javascript:;">'
                                     + '<h3>' + v.sysbackTitle + '</h3>'
-                                    + '<p>' + v.sysbackAddby + '</p>'
+                                    + '<p> </p><br/>'
                                     + '<p>' + formatDate(v.sysbackAddtime) + '</p>'
                                     + '</a>'
                                     + '</li>'

@@ -29,6 +29,7 @@ body {
 }
 .notice_nav img {
   width: 100%;
+  height: 9rem;
   display: block;
 }
 .notice_list {

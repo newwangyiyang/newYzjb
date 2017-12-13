@@ -35,7 +35,7 @@
     </a>
     <script type="text/html" id="lashList">
         {{each list}}
-        <h3 class="show_title"><em></em>{{$value.agentdepName}}</h3>
+        <h3 class="show_title"><em></em>{{$value.agentdepName+= ' ['+$value.pharmInfo.pharminfoAbbreviation+']'}}</h3>
         <ul class="list_body">
             <li class="clearfix">
                 <i>大区：</i>
@@ -68,6 +68,10 @@
             <li class="clearfix">
                 <i>应补保证金（万元）：</i>
                 <span>{{$value.agentdepHassupdep == '' ? '0' : $value.agentdepHassupdep}}</span>
+            </li>
+            <li class="clearfix">
+                <i>截止日期 ：</i>
+                <span>{{$value.agentdepRemark3 == null ? '未知' : $value.agentdepRemark3}}</span>
             </li>
         </ul>
         {{/each}}

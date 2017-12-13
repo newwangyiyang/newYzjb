@@ -46,7 +46,7 @@
     </a>
     <script type="text/html" id="lashList">
         {{each list}}
-        <h3 class="show_title"><em></em>{{$value.userinfo.userName}}</h3>
+        <h3 class="show_title"><em></em>{{$value.userinfo.userName+= ' ['+$value.pharmInfo.pharminfoAbbreviation+']'}}</h3>
         <ul class="show_content" id="show_own">
             <li><span>省份 ：</span><span class="provinceO">{{$value.userinfo.userProvince}}</span></li>
             <li><span>地区 ：</span><span class="areaLoc">{{$value.userinfo.userRegion}}</span></li>
@@ -58,6 +58,7 @@
             <li><span>医学推广费：</span><span class="spreadPrice">{{$value.arrPromotion}}</span></li>
             <li><span>欠费合计 ：</span><span class="arrPrice">{{$value.arrTotalArrears}}</span></li>
             <li><span>扣款方式 ：</span><span class="priceMethod">{{$value.arrDebit == 1 ? '帐内自动扣' : '自行打回公司'}}</span></li>
+            <li><span>截止日期 ：</span><span class="end_time">{{$value.remark3 == null ? '未知' : $value.remark3}}</span></li>
         </ul>
         {{/each}}
     </script>

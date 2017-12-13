@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*.clearfix 清除浮动相关配置 */
+        .clearfix:before,.clearfix:after {
+            content:'';
+            display: table;
+        }
+        .clearfix:after {
+            clear: both;
+        }
+        .clearfix {
+            *zoom:1;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container" style="max-width:640px;min-width:320px;margin:0 auto;background-color:#eaeaea;">
+        <p>wodoubuzhidaowoxuyaogansha,xiandeyib,nishuoshoujidaodiyaobuyaone,jiujiezhong,fanzhengwoshiyunhule</p>
+        <div>qinaide,wozhendexaingnile,woaini,qinaide,huilaiba,wozuiqinaide,wozhendehaoxiangni.</div>
+        <div>wojuedewoxianzaixuyaolixingfenxi,chuquxianguanfeiyong,woxianzaizhendemeiyoushenmeqianquhuangeshoujiyong,erqie,woxianzailuc</div>
+        <ul>
+            <li>
+                <i class="iconfont icon-search"></i>
+                <span>loser is me</span>
+            </li>
+            <li>
+                <i class="iconfont icon-go-back"></i>
+                <span>lushichuanshuoba</span>
+            </li>
+            <li>
+                <i class="iconfont icon-back"></i>
+                <span>i am a loser</span>
+            </li>
+            <li>
+                <i class="iconfont icon-gook"></i>
+                <span class="box clearfix">
+
+                </span>
+            </li>
+            <li>
+                <i class="iconfont icon-diandianke"></i>
+
+            </li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="boxAll">
+        <script>
+            $('#entry').on('click', function () {
+            if (!telTrue || !codeTrue) {
+                if (!telTrue) {
+                    $('#userTel').next('p').show();
+                    $('#userTel').focus();
+                    return false;
+                } else if (!codeTrue) {
+                    $('#idenCode').next('p').show();
+                    $('#idenCode').focus();
+                    return false;
+                }
+            } else if (telTrue && codeTrue && requestBoo) {
+                $.ajax({
+                    url: getPort() + 'userLogin',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {
+                        'phoneNum': $('#userTel').val(),
+                        'vCode': $('#idenCode').val()
+                    },
+                    //后台验证，返回Boolean，判断验证是否正确，书写逻辑,跳转网页；
+                    success: function (data) {
+                        console.log(data);
+                        if (data.success && data.statusCode == 1) {
+                            // alert(json.message);
+                            //手机验证已通过；
+                            setCookie("userId", data.obj.userId);
+                            setCookie("userCode", data.obj.userCode);
+                            setCookie("userName", data.obj.userName);
+                            setCookie("userSex", data.obj.userSex);
+                            setCookie("userMob", data.obj.userMob);
+                            setCookie("userProvince", data.obj.userProvince);
+                            setCookie("userRegion", data.obj.userRegion);
+                            setCookie("deptName", data.obj.deptName);
+                            window.location.href = './pages/onePage.html';
+                        } else if (data.statusCode == "0") {
+                            layer.open({
+                                content: data.message,
+                                skin: 'msg',
+                                time: 2 //2秒后自动关闭
+                            });
+                            window.self.location;
+                            window.location.href = 'http://www.baidu.com';
+                            
+                        }
+                    }
+                });
+            }
+            });
+        </script>
+    </div>
+    <p>+1400(银行卡), +4500(工资), -1600(手机), -900(饭), -700(房租), -800(还债),-400(火车票) +300(摩拜押金),
+    </p>
+</body>
+
+</html>

@@ -1,5 +1,7 @@
 (function () {
     $(function () {
+        //限定body的高度
+        $('body').height($('body')[0].clientHeight);
         //手机号输入框正则验证
         var regTel = /^(0|86|17951)?(13[0-9]|15[012356789]|17[0678]|18[0-9]|14[57])[0-9]{8}$/;
         var regCode = /^\d{4}$/;
@@ -18,7 +20,8 @@
             codeTrue ? $(this).next('p').hide() : $(this).next('p').show();
         });
         //获取验证码
-        $('#getCode').on('click', function () {
+        $('#getCode').on('click', function (e) {
+            e.preventDefault();
             if (!telTrue) {
                 $('#userTel').next('p').show();
                 $('#userTel').focus();
